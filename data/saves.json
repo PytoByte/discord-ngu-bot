@@ -1,0 +1,314 @@
+{
+    "\u041a\u043e\u0448\u043a\u0430 \u043c\u0430\u043b\u044c\u0447\u0438\u043a#kekw": {
+        "discord": 436201574063276042,
+        "playerStats": {
+            "url": "https://tracker.gg/valorant/profile/riot/\u041a\u043e\u0448\u043a\u0430%20\u043c\u0430\u043b\u044c\u0447\u0438\u043a%23kekw/overview?playlist=competitive&season=all",
+            "nickname": "\u041a\u043e\u0448\u043a\u0430 \u043c\u0430\u043b\u044c\u0447\u0438\u043a#kekw",
+            "rank": "Unrated",
+            "playTime": "          206h 57m        ",
+            "matches": "360",
+            "kd": "0.87",
+            "middleDamageForRound": "125.8",
+            "winRate": "48.3%",
+            "middleScoreForRound": "190.8",
+            "middleKillsForRound": "0.7",
+            "TopAgent1Data": {
+                "name": "Sage",
+                "time": "44h 03m",
+                "matches": "74",
+                "WinRate": "50.0%",
+                "KD": "0.89",
+                "ADR": "121.8"
+            },
+            "TopAgent2Data": {
+                "name": "Sova",
+                "time": "21h 00m 20s",
+                "matches": "38",
+                "WinRate": "39.5%",
+                "KD": "0.78",
+                "ADR": "123.5"
+            },
+            "TopAgent3Data": {
+                "name": "Omen",
+                "time": "19h 43m 25s",
+                "matches": "35",
+                "WinRate": "45.7%",
+                "KD": "0.90",
+                "ADR": "127.5"
+            },
+            "bestRank": "Platinum 1",
+            "wins": "174",
+            "clutches": "551",
+            "flawless": "268",
+            "kills": "4,710",
+            "deaths": "5,414",
+            "assists": "2,119",
+            "headshots": "2,261",
+            "percentHeadshots": "13.8%",
+            "maxKillsForMatch": "33",
+            "additional_analysis": "\u0420\u043e\u043b\u044c: \u0421\u043c\u043e\u043a\u0438: 1; \u0410\u0442\u0430\u043a\u0430: 0; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 1; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 2\n\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u043a\u0438\u043b\u043b\u0430: 116.2",
+            "role_analysis_result": "\u0421\u043c\u043e\u043a\u0438: 1; \u0410\u0442\u0430\u043a\u0430: 0; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 1; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 2",
+            "skill_analysis_result": "116.2"
+        }
+    },
+    "\u041e\u0431\u0435\u0440\u043e\u043d#RUS": {
+        "discord": 461547832927584256,
+        "playerStats": {
+            "url": "https://tracker.gg/valorant/profile/riot/\u041e\u0431\u0435\u0440\u043e\u043d%23RUS/overview?playlist=competitive&season=all",
+            "nickname": "\u041e\u0431\u0435\u0440\u043e\u043d#RUS",
+            "rank": "Silver 2",
+            "playTime": "          353h 48m        ",
+            "matches": "601",
+            "kd": "1.05",
+            "middleDamageForRound": "133.0",
+            "winRate": "48.2%",
+            "middleScoreForRound": "201.4",
+            "middleKillsForRound": "0.7",
+            "TopAgent1Data": {
+                "name": "Omen",
+                "time": "106h 25m",
+                "matches": "184",
+                "WinRate": "48.9%",
+                "KD": "1.01",
+                "ADR": "127.0"
+            },
+            "TopAgent2Data": {
+                "name": "Cypher",
+                "time": "36h 25m",
+                "matches": "59",
+                "WinRate": "49.1%",
+                "KD": "1.08",
+                "ADR": "132.1"
+            },
+            "TopAgent3Data": {
+                "name": "Astra",
+                "time": "34h 29m",
+                "matches": "58",
+                "WinRate": "48.3%",
+                "KD": "1.01",
+                "ADR": "125.0"
+            },
+            "bestRank": "Platinum 2",
+            "wins": "290",
+            "clutches": "794",
+            "flawless": "550",
+            "kills": "8,950",
+            "deaths": "8,535",
+            "assists": "2,939",
+            "headshots": "4,824",
+            "percentHeadshots": "15.6%",
+            "maxKillsForMatch": "34",
+            "additional_analysis": "\u0420\u043e\u043b\u044c: \u0421\u043c\u043e\u043a\u0438: 2; \u0410\u0442\u0430\u043a\u0430: 0; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 1; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 2\n\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u043a\u0438\u043b\u043b\u0430: 148.03",
+            "role_analysis_result": "\u0421\u043c\u043e\u043a\u0438: 2; \u0410\u0442\u0430\u043a\u0430: 0; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 1; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 2",
+            "skill_analysis_result": "148.03"
+        }
+    },
+    "NGU Inzerty#noLDR": {
+        "discord": 407080829098000394,
+        "playerStats": {
+            "url": "https://tracker.gg/valorant/profile/riot/NGU%20Inzerty%23noLDR/overview?playlist=competitive&season=all",
+            "nickname": "NGU Inzerty#noLDR",
+            "rank": "Platinum 1",
+            "playTime": "          722h 52m        ",
+            "matches": "1,260",
+            "kd": "1.04",
+            "middleDamageForRound": "143.9",
+            "winRate": "48.6%",
+            "middleScoreForRound": "222.5",
+            "middleKillsForRound": "0.8",
+            "TopAgent1Data": {
+                "name": "Jett",
+                "time": "162h 57m",
+                "matches": "288",
+                "WinRate": "49.6%",
+                "KD": "1.10",
+                "ADR": "153.2"
+            },
+            "TopAgent2Data": {
+                "name": "Reyna",
+                "time": "94h 30m",
+                "matches": "164",
+                "WinRate": "57.9%",
+                "KD": "1.18",
+                "ADR": "158.2"
+            },
+            "TopAgent3Data": {
+                "name": "Sova",
+                "time": "92h 34m",
+                "matches": "161",
+                "WinRate": "52.8%",
+                "KD": "1.10",
+                "ADR": "151.8"
+            },
+            "bestRank": "Diamond 3",
+            "wins": "613",
+            "clutches": "1,820",
+            "flawless": "1,030",
+            "kills": "19,853",
+            "deaths": "19,102",
+            "assists": "6,008",
+            "headshots": "11,171",
+            "percentHeadshots": "19.7%",
+            "maxKillsForMatch": "39",
+            "additional_analysis": "\u0420\u043e\u043b\u044c: \u0421\u043c\u043e\u043a\u0438: 0; \u0410\u0442\u0430\u043a\u0430: 2; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 0; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 1\n\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u043a\u0438\u043b\u043b\u0430: 185.12",
+            "role_analysis_result": "\u0421\u043c\u043e\u043a\u0438: 0; \u0410\u0442\u0430\u043a\u0430: 2; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 0; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 1",
+            "skill_analysis_result": "185.12"
+        }
+    },
+    "Rooklyn#8424": {
+        "discord": 718145295916990544,
+        "playerStats": {
+            "url": "https://tracker.gg/valorant/profile/riot/Rooklyn%238424/overview?playlist=competitive&season=all",
+            "nickname": "Rooklyn#8424",
+            "rank": "Platinum 2",
+            "playTime": "          324h 26m        ",
+            "matches": "564",
+            "kd": "1.03",
+            "middleDamageForRound": "137.9",
+            "winRate": "48.4%",
+            "middleScoreForRound": "216.6",
+            "middleKillsForRound": "0.7",
+            "TopAgent1Data": {
+                "name": "Raze",
+                "time": "164h 52m",
+                "matches": "291",
+                "WinRate": "49.8%",
+                "KD": "1.09",
+                "ADR": "152.8"
+            },
+            "TopAgent2Data": {
+                "name": "Sage",
+                "time": "93h 43m",
+                "matches": "158",
+                "WinRate": "50.6%",
+                "KD": "1.01",
+                "ADR": "122.4"
+            },
+            "TopAgent3Data": {
+                "name": "Reyna",
+                "time": "11h 51m 45s",
+                "matches": "21",
+                "WinRate": "38.1%",
+                "KD": "0.93",
+                "ADR": "128.0"
+            },
+            "bestRank": "Platinum 3",
+            "wins": "273",
+            "clutches": "817",
+            "flawless": "452",
+            "kills": "8,599",
+            "deaths": "8,369",
+            "assists": "3,049",
+            "headshots": "4,154",
+            "percentHeadshots": "15.1%",
+            "maxKillsForMatch": "41",
+            "additional_analysis": "\u0420\u043e\u043b\u044c: \u0421\u043c\u043e\u043a\u0438: 0; \u0410\u0442\u0430\u043a\u0430: 2; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 1; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 1\n\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u043a\u0438\u043b\u043b\u0430: 156.17",
+            "role_analysis_result": "\u0421\u043c\u043e\u043a\u0438: 0; \u0410\u0442\u0430\u043a\u0430: 2; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 1; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 1",
+            "skill_analysis_result": "156.17"
+        }
+    },
+    "Term1d#ShowT": {
+        "discord": 408653127948959754,
+        "playerStats": {
+            "url": "https://tracker.gg/valorant/profile/riot/Term1d%23ShowT/overview?playlist=competitive&season=all",
+            "nickname": "Term1d#ShowT",
+            "rank": "Gold 3",
+            "playTime": "          758h 07m        ",
+            "matches": "1,291",
+            "kd": "1.02",
+            "middleDamageForRound": "144.2",
+            "winRate": "48.0%",
+            "middleScoreForRound": "222.7",
+            "middleKillsForRound": "0.8",
+            "TopAgent1Data": {
+                "name": "Phoenix",
+                "time": "441h 26m",
+                "matches": "750",
+                "WinRate": "48.3%",
+                "KD": "1.06",
+                "ADR": "150.6"
+            },
+            "TopAgent2Data": {
+                "name": "Sage",
+                "time": "120h 23m",
+                "matches": "208",
+                "WinRate": "47.1%",
+                "KD": "0.94",
+                "ADR": "130.2"
+            },
+            "TopAgent3Data": {
+                "name": "Viper",
+                "time": "47h 25m",
+                "matches": "77",
+                "WinRate": "49.4%",
+                "KD": "0.95",
+                "ADR": "128.6"
+            },
+            "bestRank": "Diamond 3",
+            "wins": "619",
+            "clutches": "1,979",
+            "flawless": "1,043",
+            "kills": "20,767",
+            "deaths": "20,320",
+            "assists": "4,891",
+            "headshots": "13,966",
+            "percentHeadshots": "24.7%",
+            "maxKillsForMatch": "40",
+            "additional_analysis": "\u0420\u043e\u043b\u044c: \u0421\u043c\u043e\u043a\u0438: 1; \u0410\u0442\u0430\u043a\u0430: 1; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 2; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 2\n\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u043a\u0438\u043b\u043b\u0430: 181.72",
+            "role_analysis_result": "\u0421\u043c\u043e\u043a\u0438: 1; \u0410\u0442\u0430\u043a\u0430: 1; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 2; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 2",
+            "skill_analysis_result": "181.72"
+        }
+    },
+    "CNL Zerita#star": {
+        "discord": 614034941017325628,
+        "playerStats": {
+            "url": "https://tracker.gg/valorant/profile/riot/CNL%20Zerita%23star/overview?playlist=competitive&season=all",
+            "nickname": "CNL Zerita#star",
+            "rank": "Unrated",
+            "playTime": "          184h 12m        ",
+            "matches": "310",
+            "kd": "1.31",
+            "middleDamageForRound": "166.7",
+            "winRate": "50.3%",
+            "middleScoreForRound": "261.3",
+            "middleKillsForRound": "0.9",
+            "TopAgent1Data": {
+                "name": "Jett",
+                "time": "73h 31m",
+                "matches": "122",
+                "WinRate": "53.3%",
+                "KD": "1.38",
+                "ADR": "171.2"
+            },
+            "TopAgent2Data": {
+                "name": "Reyna",
+                "time": "54h 03m",
+                "matches": "90",
+                "WinRate": "50.0%",
+                "KD": "1.31",
+                "ADR": "173.7"
+            },
+            "TopAgent3Data": {
+                "name": "Killjoy",
+                "time": "18h 23m 13s",
+                "matches": "32",
+                "WinRate": "56.2%",
+                "KD": "1.40",
+                "ADR": "165.5"
+            },
+            "bestRank": "Platinum 1",
+            "wins": "156",
+            "clutches": "412",
+            "flawless": "305",
+            "kills": "5,962",
+            "deaths": "4,536",
+            "assists": "1,200",
+            "headshots": "3,796",
+            "percentHeadshots": "25.2%",
+            "maxKillsForMatch": "46",
+            "additional_analysis": "\u0420\u043e\u043b\u044c: \u0421\u043c\u043e\u043a\u0438: 0; \u0410\u0442\u0430\u043a\u0430: 2; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 1; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 0\n\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u043a\u0438\u043b\u043b\u0430: 308.07",
+            "role_analysis_result": "\u0421\u043c\u043e\u043a\u0438: 0; \u0410\u0442\u0430\u043a\u0430: 2; \u041e\u0431\u043e\u0440\u043e\u043d\u0430: 1; \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430: 0",
+            "skill_analysis_result": "308.07"
+        }
+    }
+}
