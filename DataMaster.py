@@ -1,5 +1,6 @@
-import json
+import discord
 
+import json
 import os
 import re
 
@@ -30,11 +31,23 @@ def get_cogs():
     return cogsList
 
 
+def get_all_data():
+    files = [discord.File(open('data/const/const_data.json', 'rb')), discord.File(open('data/dinamic/dinamic_data.json', 'rb')), discord.File(open('data/saves.json', 'rb')), discord.File(open('data/dinamic/rank_data.json', 'rb'))]
+    return files
+    
+
 def get_main_data():
     const = load_data('const/const_data.json')
     dinamic = load_data('dinamic/dinamic_data.json')
     mainData = {'const':const, 'dinamic':dinamic}
     return mainData
+
+
+async def dump_from_discord_json(url, fileJSON):
+    await fileJSON.save('data/temp.json')
+    newJSON = load_data('temp.json')
+    dump_data(url, newJSON)
+    os.remove('data/temp.json')
             
             
 def get_saves():

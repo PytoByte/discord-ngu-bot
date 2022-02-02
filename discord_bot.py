@@ -60,4 +60,4 @@ async def help(ctx):
     await ctx.send(embed=embed)
     
 
-bot.run(data['const']['TOKEN'])
+bot.run(dm.load_data('const/token.json')['TOKEN'])
