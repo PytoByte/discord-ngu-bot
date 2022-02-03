@@ -7,7 +7,7 @@ import os
 async def isAdmin(ctx):
     yes = False
     for role in ctx.author.roles:
-        if role.id==dm.get_main_data()['dinamic']['admin']:
+        if role.id==dm.get_main_data()['dinamic']['adminRole']:
             yes=True
             break
     if yes==False:
