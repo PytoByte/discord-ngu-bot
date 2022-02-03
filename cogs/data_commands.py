@@ -343,6 +343,16 @@ class data_commands(commands.Cog, name='База сканирования'):
     @scan_data.command(name='спис', description=f'Вывести список игроков из базы сканирования', brief='')
     async def saves_list(self, ctx):
         playersData = dm.get_saves()
+
+        if len(playersData.keys())==0:
+            embed = discord.Embed(
+                title = 'Список игроков в базе сканирования',
+                description = 'База пуста',
+                colour = discord.Colour.blue()
+            )
+            await ctx.send(embed=embed)
+            return
+        
         text = ''
         place = 1
         places = ''
