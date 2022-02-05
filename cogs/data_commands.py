@@ -16,8 +16,8 @@ class data_commands(commands.Cog, name='База сканирования'):
         ratings = []
         ratings_players = {}
         for nickname in playersData:
-            ratings.append(playersData[nickname]['playerStats']['skill_analysis_result'])
-            ratings_players[playersData[nickname]['playerStats']['skill_analysis_result']] = nickname
+            ratings.append(float(playersData[nickname]['playerStats']['skill_analysis_result']))
+            ratings_players[float(playersData[nickname]['playerStats']['skill_analysis_result'])] = nickname
         ratings.sort()
         ratings.reverse()
         text = ''

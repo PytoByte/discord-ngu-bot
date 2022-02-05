@@ -30,6 +30,10 @@ async def give_rank(playerStats, bot):
                     if userRoles.count(guild.get_role(rank_data[rank]))==0:
                         await user.add_roles(guild.get_role(rank_data[rank]))
                         print(f"Выдан ранг {rank}")
+                elif rank.startswith('RR'):
+                    rank='Immortal'
+                    await user.add_roles(guild.get_role(rank_data[rank]))
+                    print(f"Выдан ранг {rank}")
                 else:
                     print(f'Неопознанный ранг {rank}')
                     

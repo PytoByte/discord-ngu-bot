@@ -19,6 +19,33 @@ class easter_eggs(commands.Cog, name='Пасхалки'):
             await message.delete()
             return
 
+
+    @commands.command(name='рейтинг.')
+    async def fake_rating(self, ctx):
+        playersData = dm.get_saves()
+        ratings = []
+        ratings_players = {}
+        for nickname in playersData:
+            if playersData[nickname]['discord']==ctx.author.id:
+                ratings.append(float(playersData[nickname]['playerStats']['skill_analysis_result'])*16394)
+                ratings_players[float(playersData[nickname]['playerStats']['skill_analysis_result'])*16394] = nickname
+            else:
+                ratings.append(float(playersData[nickname]['playerStats']['skill_analysis_result']))
+                ratings_players[float(playersData[nickname]['playerStats']['skill_analysis_result'])] = nickname
+        ratings.sort()
+        ratings.reverse()
+        text = ''
+        place = 1
+        for r in ratings:
+            text+=str(place)+') '+ratings_players[r]+' ('+str(r)+')'+'\n'
+            place+=1
+        embed = discord.Embed(
+            title = 'Рейтинг игроков',
+            description = text,
+            colour = discord.Colour.blue()
+        )
+        await ctx.send(embed=embed)
+
     @commands.command(name='скам')
     async def scam(self, ctx, mention):
         luck = ri(0,1)

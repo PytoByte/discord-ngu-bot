@@ -42,7 +42,6 @@ class developer(commands.Cog, name='Для разработчика'):
     async def dump_base(self, ctx, url):
         if await isAdmin(ctx):
             await dm.dump_from_discord_json(url, ctx.message.attachments[0])
-            await ctx.send('Готово')
        
 
 def setup(bot):

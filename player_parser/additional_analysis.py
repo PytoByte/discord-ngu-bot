@@ -72,8 +72,25 @@ def role_analysis(playerStats, additional_analysis_result, errors): #роль и
 
 def skill_analysis(playerStats, additional_analysis_result, errors): #скилл игрока
     try:
+        rank = (playerStats['rank'].split())[0]
+        
+        if rank=='Unrated' or rank=='Iron' or rank=='Bronze' or rank=='Silver':
+            rank = float(1)
+        elif rank=='Gold':
+            rank = float(1.05)
+        elif rank=='Platinum':
+            rank = float(1.1)
+        elif rank=='Diamond':
+            rank = float(1.15)
+        elif rank=='Immortal' or rank.startswith('RR'):
+            rank = float(1.2)
+        elif rank=='Radiant':
+            rank = float(1.25)
+        else:
+            rank = float(1)
+                 
         additional_analysis_result += f"\nУровень скилла: {round(float(playerStats['kd'])*float(playerStats['middleKillsForRound'])*float(playerStats['middleScoreForRound']), 2)}"
-        skill_analysis_result = str(round(float(playerStats['kd'])*float(playerStats['middleKillsForRound'])*float(playerStats['middleScoreForRound']), 2))
+        skill_analysis_result = str(round(float(playerStats['kd'])*float(playerStats['middleKillsForRound'])*float(playerStats['middleScoreForRound'])*rank, 2))
     except BaseException as error:
         skill_analysis_result = '(ошибка)'
         errors['count']+=1
