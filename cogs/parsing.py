@@ -30,7 +30,7 @@ async def give_rank(playerStats, bot):
                     if userRoles.count(guild.get_role(rank_data[rank]))==0:
                         await user.add_roles(guild.get_role(rank_data[rank]))
                         print(f"Выдан ранг {rank}")
-                elif rank.startswith('RR'):
+                elif rank.endswith('RR'):
                     rank='Immortal'
                     await user.add_roles(guild.get_role(rank_data[rank]))
                     print(f"Выдан ранг {rank}")
@@ -82,7 +82,7 @@ class parsing(commands.Cog, name='Сканирование'):
     async def parse_task_now(self, ctx):
         embed = discord.Embed(
             title = 'Сканирование..',
-            description = 'Сканирование началось, оно может идти довольно долго..',
+            description = 'Примерное время сканирования: '+str(len(list((dm.get_saves()).keys()))*3)+' секунд',
             colour = discord.Colour.gold()
         )
         await ctx.send(embed=embed, delete_after=len( list( (dm.get_saves() ).keys() ) ) *3 )
@@ -90,10 +90,17 @@ class parsing(commands.Cog, name='Сканирование'):
         
         if changes == False:
             embed = discord.Embed(
-            title = 'Итог сканирования',
-            description = 'Изменения не найдены',
-            colour = discord.Colour.blue()
-        )
+                title = 'Итог сканирования',
+                description = 'Изменения не найдены',
+                colour = discord.Colour.blue()
+            )
+        else:
+            embed = discord.Embed(
+                title = 'Итог сканирования',
+                description = 'Были обнаружены изменения в статистиках',
+                colour = discord.Colour.blue()
+            )
+        
         await ctx.send(embed=embed)
         
 

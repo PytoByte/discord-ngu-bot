@@ -27,6 +27,8 @@ async def on_ready():
         
     print('Винтики загружены!\n')
 
+    await (bot.get_user(data['const']['userToMention'])).send('Бот запущен\n'+str(dt.now()))
+
 
 @bot.command(name='помощь')
 async def help(ctx):

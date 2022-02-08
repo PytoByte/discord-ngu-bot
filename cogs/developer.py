@@ -38,10 +38,11 @@ class developer(commands.Cog, name='Для разработчика'):
             await ctx.send('', files=dm.get_all_data())
 
 
-    @commands.command(name='загрузить_базу', description=f'загружает базу по файлу json (НЕ ПРАВИЛЬНО ЗАГРУЖЕННЫЙ ФАЙЛ ПОВРЕДИТ РАБОТУ БОТА)', brief='[путь к базе] + json файл')
+    @commands.command(name='загрузить_базу', description=f'Загружает базу по файлу json', brief='[путь к базе] + json файл')
     async def dump_base(self, ctx, url):
         if await isAdmin(ctx):
             await dm.dump_from_discord_json(url, ctx.message.attachments[0])
+            await ctx.send('Готово')
        
 
 def setup(bot):
