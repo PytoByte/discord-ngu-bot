@@ -1,4 +1,5 @@
 import discord
+import psycopg2
 
 import json
 import os
@@ -31,9 +32,9 @@ def get_cogs():
     return cogsList
 
 
-def get_all_data():
-    files = [discord.File(open('data/const/const_data.json', 'rb')), discord.File(open('data/dinamic/dinamic_data.json', 'rb')), discord.File(open('data/saves.json', 'rb')), discord.File(open('data/dinamic/rank_data.json', 'rb'))]
-    return files
+def get_file_saves():
+    files = [discord.File(open('data/saves.json', 'rb'))]
+    return saves
     
 
 def get_main_data():
@@ -43,7 +44,7 @@ def get_main_data():
     return mainData
 
 
-async def dump_from_discord_json(url, fileJSON):
+async def dump_saves_from_discord_json(fileJSON):
     await fileJSON.save('data/temp.json')
     newJSON = load_data('temp.json')
     dump_data(url, newJSON)
@@ -51,8 +52,19 @@ async def dump_from_discord_json(url, fileJSON):
             
             
 def get_saves():
-    return load_data('saves.json')
+    conn = psycopg2.connect(database="deqlvv8fjb39m4", user="hbddisfeydelxy", password="6e4b3191594d5cf20249962a4cabf3127f5f52a4d6916069c530d2549022804c", host="ec2-54-195-76-73.eu-west-1.compute.amazonaws.com", port=5432)
+    cur = conn.cursor()
+    cur.execute("SELECT saves FROM saves")
+    return cur.fetchall()[0][0]
 
+def dump_saves(newJSON):
+    conn = psycopg2.connect(database="deqlvv8fjb39m4", user="hbddisfeydelxy", password="6e4b3191594d5cf20249962a4cabf3127f5f52a4d6916069c530d2549022804c", host="ec2-54-195-76-73.eu-west-1.compute.amazonaws.com", port=5432)
+    cur = conn.cursor()
+
+    cur.execute("UPDATE saves SET saves = ('"+str(json.dumps(newJSON))+"')")
+    conn.commit()
+
+    
 #d = {'player':{'discord':'id', 'playerStats':{'data1':1, 'data2':2}}}
 #dump_data('saves.json', d)
     

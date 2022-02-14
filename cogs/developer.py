@@ -31,17 +31,16 @@ class developer(commands.Cog, name='Для разработчика'):
             mainData = dm.get_main_data()
             await ctx.send('Версия бота: '+mainData['const']['version'])
 
-    @commands.command(name='базы', description=f'Отправляет все базы данных имеющиеся в боте', brief='')
-    async def get_bases(self, ctx):
+    @commands.command(name='сохр', description=f'Отправляет базу с сохранениями в виде файла', brief='')
+    async def get_saves_file(self, ctx):
         if await isAdmin(ctx):
-            mainData = dm.get_main_data()
-            await ctx.send('', files=dm.get_all_data())
+            await ctx.send('', files=dm.get_file_saves())
 
 
-    @commands.command(name='загрузить_базу', description=f'Загружает базу по файлу json', brief='[путь к базе] + json файл')
-    async def dump_base(self, ctx, url):
+    @commands.command(name='загр_сохр', description=f'Загружает сохранения по файлу json', brief='+ json файл')
+    async def dump_saves_base(self, ctx):
         if await isAdmin(ctx):
-            await dm.dump_from_discord_json(url, ctx.message.attachments[0])
+            await dm.dump_saves_from_discord_json(ctx.message.attachments[0])
             await ctx.send('Готово')
        
 

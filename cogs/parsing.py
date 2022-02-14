@@ -104,11 +104,12 @@ class parsing(commands.Cog, name='Сканирование'):
         await ctx.send(embed=embed)
         
 
-    @tasks.loop(minutes=10.0)
+    @tasks.loop(minutes=30.0)
     async def parse_task(bot):
         changes = False
         print('('+str(dt.now())+') Обновление статистики...\n')
         saves = dm.get_saves()
+        newSaves = saves.copy()
         data = dm.get_main_data()
         guild = bot.get_guild(data['const']['guildID'])
         spamChannel = guild.get_channel(data['dinamic']['spamChannelID'])
@@ -126,9 +127,7 @@ class parsing(commands.Cog, name='Сканирование'):
                     
                     if saves[nickname]['playerStats']!=ptggResponse['newPlayerStats'] and ptggResponse['convertorResult']!=None:
                         changes = True
-                        newSaves = dm.load_data('saves.json')
                         newSaves[nickname]['playerStats']=ptggResponse['newPlayerStats']
-                        dm.dump_data('saves.json', newSaves)
                         
                         embed = discord.Embed(
                             title = f'У вас изменение в статистике `{nickname}`!',
@@ -144,9 +143,7 @@ class parsing(commands.Cog, name='Сканирование'):
                     print(ptggResponse['error'])
                     if ptggResponse['error'] != 'Время ожидания ответа сайта истекло' and ptggResponse['error'] != 'Ошибка playerStats':
                         print('Игрок удалён из базы')
-                        playersData = dm.load_data('saves.json')
-                        playersData.pop(nickname)
-                        dm.dump_data('saves.json', playersData)
+                        newSaves.pop(nickname)
                         
                         embed = discord.Embed(
                             title = f'Ошибка сканирования `{nickname}`',
@@ -156,10 +153,10 @@ class parsing(commands.Cog, name='Сканирование'):
                         await spamChannel.send(embed=embed)
                         
                 print('===== Конец '+nickname+' =====\n')
-        print('('+str(dt.now())+') Обновление завершено\n')
-        return changes
-            
-                
+            dm.dump_saves(newSaves)
+            print('('+str(dt.now())+') Обновление завершено\n')
+            return changes
+     
 
 def setup(bot):
     bot.add_cog(parsing(bot))

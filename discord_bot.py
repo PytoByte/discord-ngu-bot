@@ -12,21 +12,17 @@ data = dm.get_main_data()
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=data['dinamic']['prefix'], intents=intents)
 
-
 @bot.event
 async def on_ready():
     bot.remove_command('help')
-    
     print('Загрузка винтиков...')
-    
     cogsList = dm.get_cogs()
     for c in cogsList:
         gap = ' '*len(c)
         print(c)
         bot.load_extension(f'cogs.{c}')
-        
     print('Винтики загружены!\n')
-
+    
     await (bot.get_user(data['const']['userToMention'])).send('Бот запущен\n'+str(dt.now()))
 
 
