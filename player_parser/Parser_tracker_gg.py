@@ -10,7 +10,7 @@ def getSoup(nick, tag):
     url = 'https://tracker.gg/valorant/profile/riot/'+nick.replace(' ', '%20')+'%23'+tag+'/overview?playlist=competitive&season=all'
     try:
         r = requests.get(url, timeout=10)
-    except:
+    except TimeoutError:
         return False, 'Время ожидания ответа сайта истекло', None, None
     soup = bs(r.content, 'html.parser')
     return True, None, soup, url

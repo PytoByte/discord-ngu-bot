@@ -52,13 +52,15 @@ async def dump_saves_from_discord_json(fileJSON):
             
             
 def get_saves():
-    conn = psycopg2.connect(database="deqlvv8fjb39m4", user="hbddisfeydelxy", password="6e4b3191594d5cf20249962a4cabf3127f5f52a4d6916069c530d2549022804c", host="ec2-54-195-76-73.eu-west-1.compute.amazonaws.com", port=5432)
+    mainData = get_main_data()
+    conn = psycopg2.connect(database=mainData["const"]["database"], user=mainData["const"]["user"], password=mainData["const"]["password"], host=mainData["const"]["host"], port=mainData["const"]["port"])
     cur = conn.cursor()
     cur.execute("SELECT saves FROM saves")
     return cur.fetchall()[0][0]
 
 def dump_saves(newJSON):
-    conn = psycopg2.connect(database="deqlvv8fjb39m4", user="hbddisfeydelxy", password="6e4b3191594d5cf20249962a4cabf3127f5f52a4d6916069c530d2549022804c", host="ec2-54-195-76-73.eu-west-1.compute.amazonaws.com", port=5432)
+    mainData = get_main_data()
+    conn = psycopg2.connect(database=mainData["const"]["database"], user=mainData["const"]["user"], password=mainData["const"]["password"], host=mainData["const"]["host"], port=mainData["const"]["port"])
     cur = conn.cursor()
 
     cur.execute("UPDATE saves SET saves = ('"+str(json.dumps(newJSON))+"')")

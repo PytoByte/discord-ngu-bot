@@ -46,10 +46,11 @@ class easter_eggs(commands.Cog, name='Пасхалки'):
         )
         await ctx.send(embed=embed)
 
-    @commands.command(name='скам')
+    """@commands.command(name='скам')
     async def scam(self, ctx, mention):
-        luck = ri(0,1)
-        if luck==1:
+        luck = ri(0,10)
+        print(luck)
+        if luck>=1:
             discordID = mention.replace('<@!', '')
             discordID = discordID.replace('>','')
             if discordID.isdigit()==False:
@@ -83,7 +84,7 @@ class easter_eggs(commands.Cog, name='Пасхалки'):
                 colour = discord.Colour.red()
             )
             await ctx.send(embed=embed, delete_after=10)
-        await ctx.message.delete()
+        await ctx.message.delete()"""
         
         
 def setup(bot):

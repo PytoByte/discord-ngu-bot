@@ -1,5 +1,10 @@
 {
     "guildID": 882205617912164372,
     "userToMention": 461547832927584256,
+    "database": "d2ruma4b4i3jqb",
+    "user": "yypxxnwjeznuji",
+    "password": "83282684db7cef88fd3727934c54d8e10e22a71d10f702cc624f0736106e26e3",
+    "host": "ec2-54-217-232-239.eu-west-1.compute.amazonaws.com",
+    "port": 5432,
     "version": "2.1"
 }
