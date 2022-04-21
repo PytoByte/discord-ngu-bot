@@ -54,7 +54,7 @@ class data_commands(commands.Cog, name='База сканирования'):
         if success:
             if playersData.get(nickname)==None:
                 playersData[nickname] = {'discord':None, 'playerStats':None}
-                dm.dump_data('saves.json', playersData)
+                dm.dump_saves(playersData)
                 
                 embed = discord.Embed(
                     title = 'Успех',
@@ -118,7 +118,7 @@ class data_commands(commands.Cog, name='База сканирования'):
                 return
 
             playersData[nickname]['discord'] = discordID
-            dm.dump_data('saves.json', playersData)
+            dm.dump_saves(playersData)
 
             embed = discord.Embed(
                 title = 'Успех',
@@ -137,7 +137,7 @@ class data_commands(commands.Cog, name='База сканирования'):
         if success:
             if playersData.get(nickname)==None:
                 playersData[nickname] = {'discord':None, 'playerStats':None}
-                dm.dump_data('saves.json', playersData)
+                dm.dump_saves(playersData)
                 
                 embed = discord.Embed(
                     title = 'Успех',
@@ -164,7 +164,7 @@ class data_commands(commands.Cog, name='База сканирования'):
 
     @scan_data.command(name='уд', description=f'Удалить игрока из базы сканирования', brief='[ник игрока]')
     async def remove(self, ctx, *, nickname):
-        playersData = dm.load_data('saves.json')
+        playersData = dm.get_saves()
         
         if playersData.get(nickname)==None:
             embed = discord.Embed(
@@ -176,7 +176,7 @@ class data_commands(commands.Cog, name='База сканирования'):
             
         else:
             playersData.pop(nickname)
-            dm.dump_data('saves.json', playersData)
+            dm.dump_saves(playersData)
 
             embed = discord.Embed(
                 title = 'Успех',
@@ -188,7 +188,7 @@ class data_commands(commands.Cog, name='База сканирования'):
 
     @scan_data.command(name='прив', description=f'Привязать игрока из базу сканирования к аккаунту дискорд', brief='[@пользователь] [ник игрока]')
     async def connect(self, ctx, mention, *, nickname):
-        discordID = mention.replace('<@!', '')
+        discordID = mention.replace('<@', '')
         discordID = discordID.replace('>','')
         
         if discordID.isdigit()==False:
@@ -238,7 +238,7 @@ class data_commands(commands.Cog, name='База сканирования'):
             return
 
         playersData[nickname]['discord'] = discordID
-        dm.dump_data('saves.json', playersData)
+        dm.dump_saves(playersData)
 
         embed = discord.Embed(
             title = 'Успех',
@@ -271,7 +271,7 @@ class data_commands(commands.Cog, name='База сканирования'):
             return
 
         playersData[nickname]['discord'] = None
-        dm.dump_data('saves.json', playersData)
+        dm.dump_saves(playersData)
 
         embed = discord.Embed(
             title = 'Успех',
@@ -331,7 +331,7 @@ class data_commands(commands.Cog, name='База сканирования'):
             return
         
         playersData[nickname]['discord'] = discordID
-        dm.dump_data('saves.json', playersData)
+        dm.dump_saves(playersData)
         embed = discord.Embed(
             title = 'Успех',
             description = f'Для игрока `{nickname}` успешно изменена привязка\nВладелец `{userBefore}` => изменился на => `{user}`',

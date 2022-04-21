@@ -226,35 +226,47 @@ def run(nickname, dm, with_bs):
     
     if success:
         success, error = doesPlayerExist(soup, nickname)
+        print('Существует ли игрок:', success)
 
         if success:
             result, playerStats = Parser(soup, url, nickname)
+            print('Есть ли результат парсинга:', result!=None)
             
             if result==None:
                 error = 'Ошибка playerStats'
+                print('Вернуть результат: ошибка')
                 return {'success':False, 'error':error, 'result':None, 'newPlayerStats':None, 'convertorResult':None}
+                
             else:
                 if with_bs:
+                    print('Сохранить данные:', with_bs)
                     playerStatsBefore = (dm.get_saves())[nickname]['playerStats']
                     
                     if playerStatsBefore==None:
+                        print('Предыдущие данные: None')
                         playerStatsBefore=playerStats
-                        newSaves = dm.load_data('saves.json')
+                        newSaves = dm.get_saves()
                         newSaves[nickname]['playerStats']=playerStats
-                        dm.dump_data('saves.json', newSaves)
+                        dm.dump_saves(newSaves)
                         
                     if playerStatsBefore!=playerStats and success:
+                        print('Есть ли разница в данных:', playerStatsBefore!=playerStats, 'и результат:', success)
                         convertorResult = convertor.convertor(playerStats, playerStatsBefore)
                         
                     else:
                         convertorResult = None
+                        print('Разницы в данных не обнаруженно или результатом явилась ошибка')
                 else:
                     convertorResult = None
-                        
+                    print('Сохранить данные:', with_bs)
+
+                print('Вернуть результат: успех')
                 return {'success':True, 'error':None, 'result':result, 'newPlayerStats':playerStats, 'convertorResult':convertorResult}
-        
+                
         else:
+            print('Вернуть результат: ошибка')
             return {'success':False, 'error':error, 'result':None, 'newPlayerStats':None, 'convertorResult':None}
-        
+            
     else:
+        print('Вернуть результат: ошибка')
         return {'success':False, 'error':error, 'result':None, 'newPlayerStats':None, 'convertorResult':None}

@@ -61,6 +61,8 @@ class parsing(commands.Cog, name='Сканирование'):
     @commands.command(name='стат', description='Вывести статистику игрока', brief='[ник игрока]')
     async def parse(self, ctx, *, nickname):
         ptggResponse = ptgg.run(nickname, dm, False)
+        print('Получен ответ от ptggResponse')
+        
         if ptggResponse['success']:
             await give_rank(ptggResponse['newPlayerStats'], self.bot)
             embed = discord.Embed(
@@ -121,6 +123,7 @@ class parsing(commands.Cog, name='Сканирование'):
             for nickname in saves.keys():
                 print('===== Начало '+nickname+' =====')
                 ptggResponse = ptgg.run(nickname, dm, True)
+                print('Получен ответ от ptggResponse')
                 
                 if ptggResponse['success']:
                     await give_rank(ptggResponse['newPlayerStats'], bot)

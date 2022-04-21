@@ -33,8 +33,20 @@ def get_cogs():
 
 
 def get_file_saves():
-    files = [discord.File(open('data/saves.json', 'rb'))]
-    return saves
+    mainData = get_main_data()
+    conn = psycopg2.connect(database=mainData["const"]["database"], user=mainData["const"]["user"], password=mainData["const"]["password"], host=mainData["const"]["host"], port=mainData["const"]["port"])
+    cur = conn.cursor()
+    cur.execute("SELECT saves FROM saves")
+    
+    with open('data/backup.json', 'w', encoding="utf-8") as write_file:
+        json.dump(cur.fetchall()[0][0], write_file, indent=4)
+
+    files = None
+    
+    with open('data/backup.json', 'rb') as rb_file:
+        files = [discord.File(rb_file)]
+        
+    return files
     
 
 def get_main_data():
@@ -47,7 +59,7 @@ def get_main_data():
 async def dump_saves_from_discord_json(fileJSON):
     await fileJSON.save('data/temp.json')
     newJSON = load_data('temp.json')
-    dump_data(url, newJSON)
+    dump_saves(newJSON)
     os.remove('data/temp.json')
             
             
